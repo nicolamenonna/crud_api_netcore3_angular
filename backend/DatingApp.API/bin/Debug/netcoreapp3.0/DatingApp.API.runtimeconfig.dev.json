@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\menonna\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\menonna\\.nuget\\packages"
+    ]
+  }
+}
