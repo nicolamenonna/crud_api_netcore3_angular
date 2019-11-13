@@ -1,4 +1,6 @@
+import { ProductService } from './services/product.service';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { RouterModule } from '@angular/router';
@@ -9,6 +11,8 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductsComponent } from './products/products.component';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -16,10 +20,12 @@ import { ProductsComponent } from './products/products.component';
     NavbarComponent,
     WelcomeComponent,
     FooterComponent,
-    ProductsComponent
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    NgbModule,
     RouterModule.forRoot([
       { path: '', component: WelcomeComponent },
       { path: 'welcome', component: WelcomeComponent },
@@ -27,7 +33,7 @@ import { ProductsComponent } from './products/products.component';
 
     ])
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

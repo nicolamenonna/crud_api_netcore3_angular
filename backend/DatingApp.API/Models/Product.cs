@@ -6,8 +6,10 @@ namespace DatingApp.API.Models
     {
         public long Id { get; set; }
         public string Name { get; set; }
-        public bool IsComplete { get; set; }
-        public string Title { get; set; }
+        public long Price { get; set; }
+        public long Quantity { get; set; }
+        public string Description { get; set; }
+
 
     }
 

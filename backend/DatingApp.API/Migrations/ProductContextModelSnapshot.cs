@@ -21,14 +21,17 @@ namespace DatingApp.API.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<bool>("IsComplete")
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("Description")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Title")
-                        .HasColumnType("TEXT");
+                    b.Property<long>("Price")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<long>("Quantity")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 

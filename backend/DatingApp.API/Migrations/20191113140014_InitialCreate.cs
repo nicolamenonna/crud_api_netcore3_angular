@@ -13,7 +13,9 @@ namespace DatingApp.API.Migrations
                     Id = table.Column<long>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(nullable: true),
-                    IsComplete = table.Column<bool>(nullable: false)
+                    Price = table.Column<long>(nullable: false),
+                    Quantity = table.Column<long>(nullable: false),
+                    Description = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
